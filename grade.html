@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparation Class Grade</title>
+    <style>
+        body {
+                text-align: center;
+                margin-top: 200px;
+            }
+            h2, h4{
+                margin: 0;
+            }
+            p#demo {
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <h2>Program Menentukan Grade</h2>
+        <h4>Preparation Class Day 1</h4>
+        <br >
+    <p>Bilangan <input type="number" id="myGrade"> <button onclick="grade()">Cek</button></p>
+    <p id="demo"></p>
+    <script>
+        function grade() {
+            var bilangan = document.getElementById("myGrade").value
+      if (bilangan >= 90){
+        document.getElementById("demo").innerText = "Selamat! Anda mendapatkan Grade A."
+      } else if (bilangan >= 80 && bilangan <= 89){
+        document.getElementById("demo").innerText = "Anda mendapatkan Grade B."
+      } else if (bilangan >= 70 && bilangan <= 79){
+        document.getElementById("demo").innerText = "Anda mendapatkan Grade C."
+      } else if (bilangan >= 60 && bilangan <= 69){
+        document.getElementById("demo").innerText = "Anda mendapatkan Grade D."
+      }else {
+        document.getElementById("demo").innerText = "Anda mendapatkan Grade E."
+      }
+  }
+   
+    </script>
+</body>
+</html>

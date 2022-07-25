@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Preparation Class Kabisat</title>
+        <style>
+            body {
+                text-align: center;
+                margin-top: 200px;
+            }
+            h2, h4{
+                margin: 0;
+            }
+            p#demo {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Program Menentukan Tahun Kabisat</h2>
+        <h4>Preparation Class Day 1</h4>
+        <br >
+        <!-- Penginputan Bilangan yang akan Dicek -->
+        <p>Bilangan <input type="number" id="myYear"> <button onclick="kabisat()">Cek</button></p>
+        <p id="demo"></p>
+        <script>
+            //Penghitungan dan Pengecekan Hasil Modulo
+            function kabisat(){
+                var tahun = document.getElementById("myYear").value
+                if ((0 == tahun % 4) && (0 != tahun % 100) || (0 == tahun % 400)) {
+                    document.getElementById("demo").innerText = tahun + " adalah tahun Kabisat"
+                 } else {
+                    document.getElementById("demo").innerText = tahun + " bukan tahun Kabisat"
+    
+                    }
+                }
+        </script>
+    </body>
+</html>

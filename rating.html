@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparation Class Rating</title>
+    <style>
+        body {
+                text-align: center;
+                margin-top: 200px;
+            }
+            h2, h4{
+                margin: 0;
+            }
+            p#demo {
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <h2>Program Menentukan Rating Sebuah Film</h2>
+        <h4>Preparation Class Day 1</h4>
+        <br >
+    <p>Bilangan <input type="number" id="myRating"> <button onclick="rating()">Cek</button></p>
+    <p id="demo"></p>
+    <script>
+        function rating() {
+            var bilangan = document.getElementById("myRating").value
+      if (bilangan >= 21){
+        document.getElementById("demo").innerText = "Film Dewasa."
+      } else if (bilangan >= 13 && bilangan <= 20){
+        document.getElementById("demo").innerText = "Film Remaja."
+      } else if (bilangan >= 9 && bilangan <= 12){
+        document.getElementById("demo").innerText = "Film Bimbingan Orang Tua."
+      } else {
+        document.getElementById("demo").innerText = "Film untuk Semua Usia."
+      }
+  }
+   
+    </script>
+</body>
+</html>
